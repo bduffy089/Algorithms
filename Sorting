@@ -1,9 +1,12 @@
+# Collection of Sorting Algorithms
+# by Britney Duffy 
 
-## selective_sort algorithm swaps the first index value for the minimum value in the array returning the lowest values to the front in each iteration of the loop.
+
+# selective_sort algorithm swaps the first index value for the minimum value in the array returning the lowest values to the front in each iteration of the loop.
 
 def selective_sort(array):
    
-    for i in range(len(array)-1):                                     # outer loop
+    for i in range(len(array)-1):                                      # outer loop
         min_index = i
         for j in range(i + 1, len(array)):                             # inner loop
             if array[j] < array[min_index]:
@@ -12,3 +15,19 @@ def selective_sort(array):
             array[i], array[min_index] = array[min_index], array[i]    # swap positions 
     return array
 
+
+# bubble_sort algorithm compares each index to the next and swaps for the larger value, bubbling it to a higher spot in the list until sorting is complete.
+
+def bubble_sort(list):
+
+    end = len(list) - 1
+    sorted = False
+
+    while not sorted:
+        sorted = True
+        for i in range(end):                            # use range(end), not range(end-1), to make the range inclusive.
+            if list[i] > list[i + 1]:
+                sorted = False                                                        
+                list[i], list[i + 1] = list[i + 1], list[i]      # Swap the elements if they are in the wrong order        
+         end -= 1
+    return list
