@@ -1,2 +1,2 @@
 # Algorithms
-Collection of handy algorithms 
+Collection of useful algorithms 
